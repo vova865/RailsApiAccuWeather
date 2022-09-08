@@ -1,5 +1,5 @@
 class AccuWeatherClient
-  URL = "http://dataservice.accuweather.com/currentconditions/v1/294021"
+  URL = "http://dataservice.accuweather.com/currentconditions/v1/294021/historical/24"
 
   def initialize(api_key)
     @api_key = api_key

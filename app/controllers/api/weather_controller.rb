@@ -2,9 +2,12 @@ class Api::WeatherController < ApplicationController
 
   def current
     # binding.pry
-    client = AccuWeatherClient.new(ENV['API_Key'])
-    res = client.weather
-    weather = WeatherDatum.create(temperature: res[0]['Temperature']['Metric']['Value'].to_f, datetime: res[0]['EpochTime'])
+    # client = AccuWeatherClient.new(ENV['API_Key'])
+    # res = client.weather
+    # weather = WeatherDatum.create(temperature: res[0]['Temperature']['Metric']['Value'].to_f, datetime: res[0]['EpochTime'])
+    WeatherDataLoader.where
+
+
     render json: weather, serializer: WeatherSerializer
   end
 
